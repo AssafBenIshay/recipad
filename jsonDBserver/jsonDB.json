@@ -1,0 +1,52 @@
+{
+    
+    "categories":[
+        {
+            "id":1,
+            "name":"עיקרית"
+        },
+        {
+            "id":2,
+            "name":"קינוח"
+        },
+        {
+            "id":3,
+            "name":"יומולדת"
+        },
+        {
+            "id":4,
+            "name":"מתאבן"
+        },
+        {
+            "id":5,
+            "name":"עצירות"
+        }
+        ],
+    "recipes":[
+        {
+            "id":1,
+            "name":"עוף בפרמזן",
+            "isFavorite":false,
+            "category":"עיקרית",
+            "type":"בשרי",
+            "time":"3 שעות",
+            "amount":4,
+            "comments":"המנה האהובה על אורי",
+            "image":"https://www.recipebox.co.il/wp-content/uploads/2008/07/parmesan-1357016_1280-825x510.jpg",
+            "link":"https://www.recipebox.co.il/%D7%A2%D7%95%D7%A3-%D7%91%D7%A4%D7%A8%D7%9E%D7%96%D7%9F/"
+        },
+        {
+            "id":2,
+            "name":"גלידה",
+            "isFavorite":true,
+            "category":"קינוח",
+            "type":"פרווה",
+            "time":"0.5 שעות",
+            "amount":10,
+            "comments":"המנה האהובה על אייל",
+            "image":"https://medias.hashulchan.co.il/www/uploads/2018/10/%D7%92%D7%9C%D7%99%D7%93%D7%AA-%D7%A6%D7%90%D7%A0%D7%A7%D7%99-%D7%9E%D7%95%D7%A0%D7%A7%D7%99-%D7%A7%D7%A8%D7%9F-%D7%A7%D7%93%D7%95%D7%A9-e1597662332235-2000x1125-1597662425.jpg",
+            "link":"https://www.hashulchan.co.il/topic/%D7%92%D7%9C%D7%99%D7%93%D7%94/"
+        }
+    ]
+    
+}
