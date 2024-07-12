@@ -1,15 +1,20 @@
-.name-container{
+.name-stage-complete {
     display: flex;
     flex-direction: row;
     place-items: center;
     border: 3px solid white;
     justify-content: start;
-    margin:1%;
+    margin: 1%;
     direction: rtl;
     border-radius: 10px;
+    padding: 20px 0;
+    background-color: #16354b
 }
 
-.name-title ,h4{
-    margin:10px 30px;
+.name-stage-complete> h1 {
+    margin: 10px 30px;
 }
 
+.jsc {
+    justify-self: center;
+}

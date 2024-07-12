@@ -1,0 +1,19 @@
+.name-container{
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    border: 3px solid white;
+    justify-content: start;
+    margin:1%;
+    direction: rtl;
+    border-radius: 10px;
+}
+
+.name-title ,h4{
+    margin:10px 30px;
+}
+
+.jsc{
+    justify-self: center;
+}
+

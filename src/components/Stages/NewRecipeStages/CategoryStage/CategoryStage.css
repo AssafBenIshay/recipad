@@ -1,0 +1,25 @@
+.category-container {
+    display: flex;
+    flex-direction: column;
+    place-items: right;
+    border: 3px solid white;
+    justify-content: start;
+    margin: 1%;
+    direction: rtl;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.category-title, h4 {
+    margin: 10px 30px;
+}
+
+.jsc {
+    justify-self: center;
+}
+
+.category-sub-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
