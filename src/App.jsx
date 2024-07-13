@@ -4,11 +4,15 @@ import AppBar from './components/AppBar/AppBar'
 import Stages from './components/Stages/Stages'
 
 function App() {
-  const [categories, setCategories] = React.useState([])
-  const [name,setName] = React.useState('') //propDrill Stages=>NameStage
+  const [categories, setCategories] = React.useState([])//list of categories from the db
+  const [name, setName] = React.useState('') //propDrill Stages=>NameStage
+  const [recipeCategory, setRecipeCategory] = React.useState('')
+  const [type,setType] = React.useState('')
+  const [timer,setTimer] = React.useState('')
   
   
   React.useEffect(() => {
+    // this function fills the dropdown with categories from the DB
     var categoriesList = []
     const get = async () => {
       let url = import.meta.env.VITE_API
@@ -23,7 +27,6 @@ function App() {
     get()
   
   }, [])
-  console.log('categories APP:>> ', categories);
   
 
   return (
@@ -35,7 +38,12 @@ function App() {
         name={name}
         categories={categories}
         setCategories={setCategories}
-
+        recipeCategory={recipeCategory}
+        setRecipeCategory={setRecipeCategory}
+        type={type}
+        setType={setType}
+        timer={timer}
+        setTimer={setTimer}
       />
     </div>
   )

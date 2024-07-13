@@ -26,8 +26,6 @@ export default function NameStage({ stage,setStage ,name,setName}) {
         }
     }
     
-    console.log('stage :>> ', stage);
-
     return (
         <>
             {stage ===1 ?<div className='name-container'>

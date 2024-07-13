@@ -1,4 +1,4 @@
-.name-stage-complete {
+.time-stage-complete {
     display: flex;
     flex-direction: row;
     place-items: center;
@@ -11,11 +11,10 @@
     background-color: #16354b
 }
 
-.name-stage-complete>h1 {
+.type-stage-complete>h1 {
     margin: 10px 30px;
 }
 
 .jsc {
     justify-self: center;
 }
-

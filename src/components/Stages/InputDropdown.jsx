@@ -2,12 +2,12 @@ import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 import './InputDropdown.css'
 
-export default function InputDropdown({ setValC, categories, setCategories }) {
+export default function InputDropdown({ setValC, categories}) {
     let options = categories
     const defaultOption = options[0]
 
     function handleChange(e) { //set value from en existing drpdown values
-        setValC('e.target', e.value)
+        setValC( e.value)
     }
     return (
         <Dropdown
