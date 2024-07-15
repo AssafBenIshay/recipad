@@ -1,5 +1,6 @@
-.time-container {
+.amount-container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     place-items: center;
     border: 3px solid white;
@@ -10,11 +11,9 @@
     width: 100vw;
     box-sizing: border-box;
 
-
-
 }
 
-.name-title, h4 {
+.name-title, h4, button {
     margin: 10px 30px;
 }
 

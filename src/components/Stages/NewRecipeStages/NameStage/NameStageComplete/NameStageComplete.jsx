@@ -1,4 +1,5 @@
 import './NameStageComplete.css'
+import React from 'react'
 
 export default function NameStageComplete({name}) {
     return (

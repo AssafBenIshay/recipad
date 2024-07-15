@@ -31,7 +31,7 @@ export default function NameStage({ stage,setStage ,name,setName}) {
             {stage ===1 ?<div className='name-container'>
                 <h2 className='name-title'>שלב ראשון : </h2>
                 <h4 className=''>בבקשה הכניסי את שם המתכון</h4>
-                <InputField setValI={setValI} />
+                <InputField setValI={setValI}/>
                 <h4 className=''>לחצי כאן לאחר שבחרת שם בשביל</h4>
                 <button onClick={handleClick}>לעבור לשלב הבא</button>
             </div>:<NameStageComplete name={name} />}

@@ -8,10 +8,10 @@
     direction: rtl;
     border-radius: 10px;
     padding: 20px 0;
-    background-color: #16354b
+    background-color: #16354b;
 }
 
-.type-stage-complete>h1 {
+.time-stage-complete>h1 {
     margin: 10px 30px;
 }
 

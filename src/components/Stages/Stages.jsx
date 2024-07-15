@@ -1,18 +1,22 @@
+import React from 'react'
+import './Stages.css'
 import Stage0 from './NewRecipeStages/Stage0/Stage0'
 import NameStage from './NewRecipeStages/NameStage/NameStage'
 import CategoryStage from './NewRecipeStages/CategoryStage/CategoryStage'
-import React from 'react'
 import TypeStage from './NewRecipeStages/TypeStage/TypeStage'
 import TimeStage from './NewRecipeStages/TimeStage/TimeStage'
+import AmountStage from './NewRecipeStages/AmountStage/AmountStage'
+import CommentsStage from './NewRecipeStages/CommentsStage/CommentsStage'
 
 export default function Stages({ setName, name, categories, setCategories, recipeCategory,
-    setRecipeCategory, type, setType, timer, setTimer }) {
+    setRecipeCategory, type, setType, timer, setTimer ,amount ,setAmount,comments,setComments}) {
     
     const [stage, setStage] = React.useState(0)
 
     return (
         <>
-            <Stage0 setStage={ setStage } stage={stage}/>
+            <Stage0 setStage={setStage} stage={stage} />
+            <div className='lego'>
             {stage >= 1 && <NameStage
                 setStage={setStage}
                 setName={setName}
@@ -38,7 +42,21 @@ export default function Stages({ setName, name, categories, setCategories, recip
                 timer={timer}
                 setTimer={setTimer}
             />}
-            
+            {stage >= 5 && <AmountStage 
+                stage={stage}
+                setStage={setStage}   
+                amount={amount}  
+                setAmount={setAmount}    
+                />}
+                {   stage >= 6 && <CommentsStage 
+                        stage={stage}
+                        setStage={setStage}
+                        comments={comments}
+                        setComments={setComments}
+                    />
+            }
+                
+            </div>
         </>
     )
 }

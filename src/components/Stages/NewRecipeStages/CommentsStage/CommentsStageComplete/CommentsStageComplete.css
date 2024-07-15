@@ -1,4 +1,4 @@
-.time-container {
+.comments-stage-complete {
     display: flex;
     flex-direction: row;
     place-items: center;
@@ -7,15 +7,18 @@
     margin: 1%;
     direction: rtl;
     border-radius: 10px;
-    width: 100vw;
-    box-sizing: border-box;
-
-
-
+    padding: 20px 0;
+    background-color: #16354b;
+    text-wrap: wrap;
 }
 
-.name-title, h4 {
-    margin: 10px 30px;
+.comments-stage-complete>span {
+    margin: 20px 10px;
+    padding: 10px 20px;
+}
+
+.name-title{
+    text-wrap: nowrap;
 }
 
 .jsc {

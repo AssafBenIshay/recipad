@@ -1,0 +1,38 @@
+.comments-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    flex-direction: row;
+    place-items: start;
+    border: 3px solid white;
+    justify-content: start;
+    margin: 1%;
+    direction: rtl;
+    border-radius: 10px;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.comments-container-top-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.comments-container-bottom-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    height:500px;
+}
+
+.name-title, h4, button {
+    margin: 10px 30px;
+    text-wrap: wrap;
+}
+
+.jsc {
+    justify-self: center;
+}

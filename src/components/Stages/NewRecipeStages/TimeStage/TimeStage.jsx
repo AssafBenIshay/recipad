@@ -8,7 +8,7 @@ export default function TimeStage({ stage, setStage, timer, setTimer }) {
     const [minutes,setMinutes] = React.useState('')
     
     function handleClick() {
-        setTimer(`${hours} שעות ו${minutes} דקות.`)
+        { hours && minutes && setTimer(`${hours} שעות ו${minutes} דקות.`) }
         setStage(5)
     }
     

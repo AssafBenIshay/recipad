@@ -1,1 +1,27 @@
 `${hours}שעות ו${minutes} דקות.`
+navigator.clipboard
+    .writeText("").then(linkBtn.innerHTML = 'אין קישור מועתק כרגע')
+
+    mainComtainer.appendChild(recipeImageLink)
+    let h4Element = recipeImageLink.querySelector('h4')
+    let textareaElement = recipeImageLink.querySelector('.image-input')
+
+    pasteBtn.addEventListener('click', (e) => {
+        navigator.clipboard.readText().then((address) => {
+            if (address.length > 1) {
+                if (testIfImage(address) === true) {
+                    //show image after button pressed
+                    let img = document.createElement('img')
+                    img.src = address
+                    let imageDiv = recipeImageLink.querySelector('.image-holder')
+                    imageDiv.appendChild(img)
+                    paste(address)
+   
+                }
+
+        
+            } else {
+                alert('יש להעתיק את קישור התמונה הרצויה')
+            }
+        })
+    })

@@ -7,6 +7,8 @@
     margin:1%;
     direction: rtl;
     border-radius: 10px;
+    width:100vw;
+    box-sizing: border-box;
 }
 
 .name-title ,h4{

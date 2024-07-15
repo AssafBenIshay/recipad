@@ -1,7 +1,7 @@
 import './InputDigit.css'
 import React from 'react'
 
-export default function InputField({ setHours, setMinutes, placeholder }) {
+export default function InputField({ setHours, setMinutes, placeholder ,setValD}) {
     
     return (
         <input type='text' placeholder={placeholder} className='digit' onChange={(e) => {
@@ -9,8 +9,10 @@ export default function InputField({ setHours, setMinutes, placeholder }) {
                 setHours(e.target.value)
             } else if (placeholder === 'דקות') {
                 setMinutes(e.target.value)
-            } 
-            
+            } else if (placeholder === 'מנות') {
+                setValD(e.target.value)
+            }
+      
         }
         }/>
     )

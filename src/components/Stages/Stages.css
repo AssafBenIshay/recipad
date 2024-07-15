@@ -1,7 +1,11 @@
 
 
-.borderStartStage{
-    
+.lego{
+   display: flex;
+   flex-direction: row; 
+   flex-wrap: wrap;
+   width: fit-content;
+   direction: rtl;
 
 }
 

@@ -1,4 +1,5 @@
 import './InputField.css'
+import React from 'react'
 
 export default function InputField({setValI}) {
     return (

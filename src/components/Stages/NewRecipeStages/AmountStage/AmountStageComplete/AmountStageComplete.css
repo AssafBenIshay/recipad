@@ -1,4 +1,4 @@
-.time-container {
+.amount-stage-complete {
     display: flex;
     flex-direction: row;
     place-items: center;
@@ -7,14 +7,11 @@
     margin: 1%;
     direction: rtl;
     border-radius: 10px;
-    width: 100vw;
-    box-sizing: border-box;
-
-
-
+    padding: 20px 0;
+    background-color: #16354b
 }
 
-.name-title, h4 {
+.amount-stage-complete>h1 {
     margin: 10px 30px;
 }
 

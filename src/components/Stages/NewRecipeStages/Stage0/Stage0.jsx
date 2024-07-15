@@ -1,6 +1,7 @@
 import whitePlus from '../../../../assets/whitePlus.png'
 import './Stage0.css'
 import Stage0Complete from './Stage0Complete/Stage0Complete'
+import React from 'react'
 
 
 export default function Stage0({ setStage,stage }) {
