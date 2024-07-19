@@ -1,7 +1,7 @@
 import React from 'react'
-import InputField from '../../InputField'
+import InputField from '../../inputComponents/InputField'
 import './CategoryStage.css'
-import InputDropdown from '../../InputDropdown'
+import InputDropdown from '../../inputComponents/InputDropdown'
 import CategoryStageComplete from './CategoryStageComplete/CategoryStageComplete'
 import Stages from '../../Stages'
 

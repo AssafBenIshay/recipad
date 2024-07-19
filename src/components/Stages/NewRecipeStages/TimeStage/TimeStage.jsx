@@ -1,5 +1,5 @@
 import React from 'react';
-import InputDigit from '../../InputDigit'
+import InputDigit from '../../inputComponents/InputDigit'
 import TimeStageComplete from './TimeStageComplete/TimeStageComplete';
 import './TimeStage.css'
 

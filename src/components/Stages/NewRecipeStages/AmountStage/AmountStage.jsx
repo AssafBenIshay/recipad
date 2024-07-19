@@ -1,6 +1,6 @@
 import React from 'react'
 import './AmountStage.css'
-import InputDigit from '../../InputDigit'
+import InputDigit from '../../inputComponents/InputDigit'
 import AmountStageComplete from './AmountStageComplete/AmountStageComplete'
 
 export default function AmountStage({stage,setStage,amount,setAmount }) {

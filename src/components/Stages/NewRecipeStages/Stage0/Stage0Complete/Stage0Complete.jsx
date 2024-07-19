@@ -1,4 +1,5 @@
 import './Stage0Complete.css'
+import React from 'react'
 
 export default function Stage0Complete({ stage }) {
     return (

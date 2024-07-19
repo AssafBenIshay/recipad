@@ -12,7 +12,8 @@ function App() {
   const [timer, setTimer] = React.useState('לא מוגדר')
   const [amount, setAmount] = React.useState('לא מוגדר')
   const [comments, setComments] = React.useState('אין הערות')
-  const [image,setImage] = React.useState(imagePlaceholder)
+  const [image, setImage] = React.useState(imagePlaceholder)
+  const [rLink,setRLink] = React.useState('')
   
   
   React.useEffect(() => {
@@ -53,6 +54,8 @@ function App() {
         setComments={setComments}
         image={image}
         setImage={setImage}
+        rLink={rLink}
+        setRLink={setRLink}
       />
     </div>
   )

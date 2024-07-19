@@ -1,0 +1,14 @@
+.link-input {
+    background-color: black;
+    border-radius: 10px;
+    height: 50px;
+    text-indent: 20px;
+    font-weight: 600;
+    font-size: 25px;
+    padding: 5px;
+    direction: rtl;
+    border: 3px solid white;
+    margin: 20px;
+    overflow: hidden;
+    flex-wrap: nowrap;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import InputField from '../../InputField';
+import InputField from '../../inputComponents/InputField';
 import './NameStage.css'
 import NameStageComplete from './NameStageComplete/NameStageComplete';
 

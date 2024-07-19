@@ -10,6 +10,12 @@
     padding: 20px 0;
     background-color: #16354b;
     text-wrap: wrap;
+    
+}
+
+.image-stage-complete>img{
+    width: 400px;
+    object-fit: contain;
 }
 
 .image-stage-complete>span {

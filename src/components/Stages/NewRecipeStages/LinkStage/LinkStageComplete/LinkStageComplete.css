@@ -1,4 +1,4 @@
-.time-stage-complete {
+.link-stage-complete {
     display: flex;
     flex-direction: row;
     place-items: center;
@@ -7,16 +7,12 @@
     margin: 1%;
     direction: rtl;
     border-radius: 10px;
-    padding: 20px 0;
+    padding: 20px 20px;
     background-color: #16354b;
-    height: min-content;
-
+    height:min-content;
 }
 
-.time-stage-complete>h1 {
+.link-stage-complete>h1 {
     margin: 10px 30px;
 }
 
-.jsc {
-    justify-self: center;
-}

@@ -1,6 +1,6 @@
 import React from 'react'
 import './TypeStage.css'
-import InputField from '../../InputField'
+import InputField from '../../inputComponents/InputField'
 import TypeStageComplete from '../TypeStage/TypeStageComplete/TypeStageComplete'
 
 export default function TypeStage({stage,setStage,type,setType}) {

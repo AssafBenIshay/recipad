@@ -1,6 +1,6 @@
 import React from 'react';
 import './CommentsStage.css'
-import InputTextArea from '../../InputTextArea'
+import InputTextArea from '../../inputComponents/InputTextArea'
 import CommentsStageComplete from './CommentsStageComplete/CommentsStageComplete'
 
 export default function CommentsStage({ stage, setStage, comments, setComments }) {

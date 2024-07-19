@@ -22,7 +22,7 @@ export default function ImageStage({ stage, setStage, image, setImage }) {
                             setImage(clipText)
                             setImageOpacity(document.getElementById('image-dest').style.opacity = '1')
                             setBtn(<button id='next2stage8' onClick={()=>setStage(8)}>לעבור לשלב הבא</button>)
-                            
+                            navigator.clipboard.writeText('')
                         }
                     else {
                         //~ לעשות בשלב מאוחר יותר חלון קופץ עבור טעויות, כדאי בסיגנון toast

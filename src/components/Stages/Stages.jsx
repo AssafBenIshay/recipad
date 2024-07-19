@@ -8,9 +8,12 @@ import TimeStage from './NewRecipeStages/TimeStage/TimeStage'
 import AmountStage from './NewRecipeStages/AmountStage/AmountStage'
 import CommentsStage from './NewRecipeStages/CommentsStage/CommentsStage'
 import ImageStage from './NewRecipeStages/ImageStage/ImageStage'
+import LinkStage from './NewRecipeStages/LinkStage/LinkStage'
+import SubmitStage from './NewRecipeStages/SubmitStage/SubmitStage'
 
 export default function Stages({ setName, name, categories, setCategories, recipeCategory,
-    setRecipeCategory, type, setType, timer, setTimer ,amount ,setAmount,comments,setComments,image,setImage}) {
+    setRecipeCategory, type, setType, timer, setTimer, amount, setAmount,
+    comments, setComments, image, setImage ,rLink ,setRLink}) {
     
     const [stage, setStage] = React.useState(0)
 
@@ -60,9 +63,16 @@ export default function Stages({ setName, name, categories, setCategories, recip
                 setStage={setStage}
                 image={image}
                 setImage={setImage}    
-            />}    
-                
-                
+            />}
+            {stage >= 8 && <LinkStage 
+                stage={stage}
+                setStage={setStage}
+                rLink={rLink}
+                setRLink={setRLink}    
+            />} 
+            {stage >=9 && <SubmitStage />
+                    
+            }               
             </div>
         </>
     )
