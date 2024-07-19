@@ -5,17 +5,16 @@ import CommentsStageComplete from './CommentsStageComplete/CommentsStageComplete
 
 export default function CommentsStage({ stage, setStage, comments, setComments }) {
     const [valI, setValI] = React.useState('')
-    const [inactive, setInactive] = React.useState(true)
+    const [btn, setBtn] = React.useState('')
+    const [isVal,setIsVal] = React.useState(false)
 
-    
     React.useEffect(() => {
         setComments(valI)
-        let btn = document.getElementById('next')
-        if (valI.length > 0) {
-            btn.removeAttribute('disabled')
+        if (isVal) {
+            setBtn(<button id='next' onClick={handleClick} >לעבור לשלב הבא</button>)
 
         } else {
-            btn.setAttribute('disabled','')
+            setBtn(<button id='next' onClick={handleClick} disabled>לעבור לשלב הבא</button>)
         }
     },[valI])
     
@@ -23,14 +22,12 @@ export default function CommentsStage({ stage, setStage, comments, setComments }
         let textArea = document.querySelector('.text-area')
         if (valI.length>0) {
             setComments(valI)
-            setInactive(false)
-            
+            setStage(7)
         }
         else {
             textArea.setAttribute('placeholder', 'לא נשמר טקסט , אנא סמני את הטקסט הרצוי על ידי גרירת הסמן על הטקסט ולאחר מכן לחצי CRTL+C או אם את בנייד לחצי לחיצה ארוכה על המסך\n על מנת להעתיק את הטקסט הרצוי')
-            setInactive(true)
         }
-        setStage(7)
+        
         
     }
 
@@ -42,10 +39,8 @@ export default function CommentsStage({ stage, setStage, comments, setComments }
                 if (description) {
                     textArea.innerHTML = description
                     setValI(description)
-                    document.getElementById('next').removeAttribute("disabled");
                 } else {
                     textArea.setAttribute('placeholder', 'לא נשמר טקסט , אנא סמני את הטקסט הרצוי על ידי גרירת הסמן על הטקסט ולאחר מכן לחצי CRTL+C או אם את בנייד לחצי לחיצה ארוכה על המסך\n על מנת להעתיק את הטקסט הרצוי')
-                    document.getElementById('next').setAttribute("disabled");
                 }
             })
     }
@@ -60,8 +55,8 @@ export default function CommentsStage({ stage, setStage, comments, setComments }
                     <button onClick={pasteText}>לחצי כאן כדי להדביק טקסט</button>
                 </div>
                 <div className='comments-container-bottom-section'>
-                    <InputTextArea setValI={setValI}/>
-                    <button id='next' onClick={handleClick} >לעבור לשלב הבא</button>
+                    <InputTextArea setValI={setValI} setIsVal={setIsVal}/>
+                    {btn}
                 </div>
             </div> : <CommentsStageComplete comments={comments} />}
         </>

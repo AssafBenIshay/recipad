@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css'
 import AppBar from './components/AppBar/AppBar'
 import Stages from './components/Stages/Stages'
+import imagePlaceholder from './assets/imagePlaceholder.png'
 
 function App() {
   const [categories, setCategories] = React.useState([])//list of categories from the db
@@ -10,7 +11,8 @@ function App() {
   const [type,setType] = React.useState('לא מוגדר')
   const [timer, setTimer] = React.useState('לא מוגדר')
   const [amount, setAmount] = React.useState('לא מוגדר')
-  const [comments ,setComments] = React.useState('אין הערות')
+  const [comments, setComments] = React.useState('אין הערות')
+  const [image,setImage] = React.useState(imagePlaceholder)
   
   
   React.useEffect(() => {
@@ -34,7 +36,6 @@ function App() {
   return (
     <div className='App'>
       <AppBar />
-      
       <Stages
         setName={setName}
         name={name}
@@ -50,6 +51,8 @@ function App() {
         setAmount={setAmount}
         comments={comments}
         setComments={setComments}
+        image={image}
+        setImage={setImage}
       />
     </div>
   )

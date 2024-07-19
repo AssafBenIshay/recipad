@@ -7,9 +7,10 @@ import TypeStage from './NewRecipeStages/TypeStage/TypeStage'
 import TimeStage from './NewRecipeStages/TimeStage/TimeStage'
 import AmountStage from './NewRecipeStages/AmountStage/AmountStage'
 import CommentsStage from './NewRecipeStages/CommentsStage/CommentsStage'
+import ImageStage from './NewRecipeStages/ImageStage/ImageStage'
 
 export default function Stages({ setName, name, categories, setCategories, recipeCategory,
-    setRecipeCategory, type, setType, timer, setTimer ,amount ,setAmount,comments,setComments}) {
+    setRecipeCategory, type, setType, timer, setTimer ,amount ,setAmount,comments,setComments,image,setImage}) {
     
     const [stage, setStage] = React.useState(0)
 
@@ -47,14 +48,20 @@ export default function Stages({ setName, name, categories, setCategories, recip
                 setStage={setStage}   
                 amount={amount}  
                 setAmount={setAmount}    
-                />}
-                {   stage >= 6 && <CommentsStage 
-                        stage={stage}
-                        setStage={setStage}
-                        comments={comments}
-                        setComments={setComments}
-                    />
-            }
+            />}
+            {stage >= 6 && <CommentsStage 
+                stage={stage}
+                setStage={setStage}
+                comments={comments}
+                setComments={setComments}
+            />}
+            {stage >= 7 && <ImageStage 
+                stage={stage}
+                setStage={setStage}
+                image={image}
+                setImage={setImage}    
+            />}    
+                
                 
             </div>
         </>

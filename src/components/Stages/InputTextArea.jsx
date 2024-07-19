@@ -2,16 +2,13 @@ import './InputTextArea.css'
 import React from 'react'
 
 
-export default function InputField({ setValI }) {
-    let btn = document.getElementById('next')
-
+export default function InputField({ setValI, setIsVal }) {
     return (
         <textarea rows={500} 
             className='text-area'
             onChange={(e) => {
-            setValI(e.currentTarget.value)
-            btn.removeAttribute('disabled')
-
+                setValI(e.currentTarget.value)
+                setIsVal(true)
             }}>
             
         </textarea>

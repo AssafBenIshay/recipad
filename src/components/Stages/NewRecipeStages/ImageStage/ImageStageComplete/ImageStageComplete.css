@@ -1,0 +1,26 @@
+.image-stage-complete {
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    border: 3px solid white;
+    justify-content: start;
+    margin: 1%;
+    direction: rtl;
+    border-radius: 10px;
+    padding: 20px 0;
+    background-color: #16354b;
+    text-wrap: wrap;
+}
+
+.image-stage-complete>span {
+    margin: 20px 10px;
+    padding: 10px 20px;
+}
+
+.name-title {
+    text-wrap: nowrap;
+}
+
+.jsc {
+    justify-self: center;
+}
