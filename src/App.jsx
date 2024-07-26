@@ -3,6 +3,9 @@ import './App.css'
 import AppBar from './components/AppBar/AppBar'
 import Stages from './components/Stages/Stages'
 import imagePlaceholder from './assets/imagePlaceholder.png'
+import Toast from './components/Notifications/Toast'
+import whitePencil from './assets/pencilWhite.png'
+
 
 function App() {
   const [categories, setCategories] = React.useState([])//list of categories from the db
@@ -13,8 +16,13 @@ function App() {
   const [amount, setAmount] = React.useState('לא מוגדר')
   const [comments, setComments] = React.useState('אין הערות')
   const [image, setImage] = React.useState(imagePlaceholder)
-  const [rLink,setRLink] = React.useState('')
-  
+  const [rLink, setRLink] = React.useState('')
+  const [recipe, setRecipe] = React.useState({})
+  const [addRecipeBtn, setAddRecipeBtn] = React.useState()
+  const [announce, setAnnounce] = React.useState('')
+  const [isStages,setIsStages] = React.useState(false)
+
+
   
   React.useEffect(() => {
     // this function fills the dropdown with categories from the DB
@@ -36,8 +44,15 @@ function App() {
 
   return (
     <div className='App'>
-      <AppBar />
-      <Stages
+      {announce && <Toast announce={announce} />}
+      <AppBar
+        addRecipeBtn={addRecipeBtn}
+        setAddRecipeBtn={setAddRecipeBtn}
+        setIsStages={setIsStages}
+        isStages={isStages}
+      />
+      {isStages && <Stages
+        setAddRecipeBtn={setAddRecipeBtn}
         setName={setName}
         name={name}
         categories={categories}
@@ -56,7 +71,11 @@ function App() {
         setImage={setImage}
         rLink={rLink}
         setRLink={setRLink}
-      />
+        recipe={recipe}
+        setRecipe={setRecipe}
+        setAnnounce={setAnnounce}
+        setIsStages={setIsStages}
+      />}
     </div>
   )
 }

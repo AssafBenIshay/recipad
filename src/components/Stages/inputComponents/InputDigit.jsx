@@ -7,9 +7,9 @@ export default function InputField({ setHours, setMinutes, placeholder ,setValD}
         <input type='text' placeholder={placeholder} className='digit' onChange={(e) => {
             if (placeholder === 'שעות') {
                 setHours(e.target.value)
-            } else if (placeholder === 'דקות') {
+            } if (placeholder === 'דקות') {
                 setMinutes(e.target.value)
-            } else if (placeholder === 'מנות') {
+            } if (placeholder === 'מנות') {
                 setValD(e.target.value)
             }
       

@@ -38,7 +38,17 @@ h1 {
 
 }
 
+.plus-btn>img {
+    width: 65px;
+}
+
 img {
     margin: auto 20px;
     cursor: pointer;
+
+}
+
+.plus-btn {
+    background-color: transparent;
+    border: none;
 }

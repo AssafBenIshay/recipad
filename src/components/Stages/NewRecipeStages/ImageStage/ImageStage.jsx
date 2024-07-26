@@ -18,7 +18,7 @@ export default function ImageStage({ stage, setStage, image, setImage }) {
                 
                 (clipText) => {
                     if (clipText.includes('jpg') || clipText.includes('jpeg') || 
-                        clipText.includes('png')) {
+                        clipText.includes('png') || clipText.includes('webp')) {
                             setImage(clipText)
                             setImageOpacity(document.getElementById('image-dest').style.opacity = '1')
                             setBtn(<button id='next2stage8' onClick={()=>setStage(8)}>לעבור לשלב הבא</button>)

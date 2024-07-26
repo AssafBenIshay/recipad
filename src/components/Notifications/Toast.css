@@ -1,0 +1,27 @@
+.toast-frame{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    color: white;
+    border:0.5px solid white;
+    border-top-left-radius:20px;
+    border-top-right-radius:5px;
+    border-bottom-left-radius:20px;
+    border-bottom-right-radius: 5px;   
+    width: fit-content;
+    padding: 5px 25px;
+    direction: rtl;
+    box-sizing: border-box;
+    position: fixed;
+    right:20px;
+    bottom: 50px;
+}
+
+.good{
+    background-color: rgb(22, 95, 0);
+}
+
+.bad{
+    background-color: rgba(220, 20, 60, 0.356)
+}
+

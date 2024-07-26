@@ -8,7 +8,11 @@ export default function TimeStage({ stage, setStage, timer, setTimer }) {
     const [minutes,setMinutes] = React.useState('')
     
     function handleClick() {
-        { hours && minutes && setTimer(`${hours} שעות ו${minutes} דקות.`) }
+        if (hours && minutes) { setTimer(`${hours} שעות ו${minutes} דקות.`) }
+        else if (hours && !minutes) { setTimer(`${hours} שעות `) }
+        else if (!hours && minutes) { setTimer(`${minutes} דקות`) }
+        else {setTimer('לא מוגדר')}
+        
         setStage(5)
     }
     

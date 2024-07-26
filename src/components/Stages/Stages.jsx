@@ -11,14 +11,14 @@ import ImageStage from './NewRecipeStages/ImageStage/ImageStage'
 import LinkStage from './NewRecipeStages/LinkStage/LinkStage'
 import SubmitStage from './NewRecipeStages/SubmitStage/SubmitStage'
 
-export default function Stages({ setName, name, categories, setCategories, recipeCategory,
-    setRecipeCategory, type, setType, timer, setTimer, amount, setAmount,
-    comments, setComments, image, setImage ,rLink ,setRLink}) {
+export default function Stages({ setName, name, categories, setCategories, recipeCategory, setRecipeCategory,
+    type, setType, timer, setTimer, amount, setAmount, comments, setComments, image, setImage, rLink, setRLink,
+    recipe, setRecipe, addRecipeBtn, setAddRecipeBtn,setAnnounce,setIsStages}) {
     
     const [stage, setStage] = React.useState(0)
 
     return (
-        <>
+        <div id='stages'>
             <Stage0 setStage={setStage} stage={stage} />
             <div className='lego'>
             {stage >= 1 && <NameStage
@@ -70,10 +70,23 @@ export default function Stages({ setName, name, categories, setCategories, recip
                 rLink={rLink}
                 setRLink={setRLink}    
             />} 
-            {stage >=9 && <SubmitStage />
+            {stage >= 9 && <SubmitStage 
+                setRecipe={setRecipe}
+                name={name}    
+                recipeCategory={recipeCategory}    
+                type={type}
+                timer={timer}
+                amount={amount}
+                comments={comments}
+                image={image}
+                rLink={rLink}
+                setAddRecipeBtn={setAddRecipeBtn}
+                setAnnounce={setAnnounce}
+                setIsStages={setIsStages}    
+            />}
                     
-            }               
+                           
             </div>
-        </>
+        </div>
     )
 }

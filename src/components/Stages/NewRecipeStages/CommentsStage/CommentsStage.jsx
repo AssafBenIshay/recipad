@@ -39,7 +39,9 @@ export default function CommentsStage({ stage, setStage, comments, setComments }
                 if (description) {
                     textArea.innerHTML = description
                     setValI(description)
+                    setIsVal(true)
                 } else {
+                    setIsVal(false)
                     textArea.setAttribute('placeholder', 'לא נשמר טקסט , אנא סמני את הטקסט הרצוי על ידי גרירת הסמן על הטקסט ולאחר מכן לחצי CRTL+C או אם את בנייד לחצי לחיצה ארוכה על המסך\n על מנת להעתיק את הטקסט הרצוי')
                 }
             })
