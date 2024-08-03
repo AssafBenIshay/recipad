@@ -5,6 +5,8 @@ import ImageStageComplete from './ImageStageComplete/ImageStageComplete';
 export default function ImageStage({ stage, setStage, image, setImage }) {
     const [imageOpacity, setImageOpacity] = React.useState(document.getElementById('image-dest'))
     const [btn, setBtn] = React.useState('')
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+
 
     React.useEffect(() => {
         setBtn(<button id='next2stage8' disabled>לעבור לשלב הבא</button>)

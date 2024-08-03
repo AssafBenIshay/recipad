@@ -1,0 +1,113 @@
+.recipe-edit {
+    background-color: #16354b;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    margin: 0 10px;
+    padding: 10px;
+    position: relative;
+    border: solid 2px white;
+    margin: 20px 10px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    max-width: 95%;
+}
+
+.plus-45deg {
+    position: absolute;
+    rotate: 45deg;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.fav-indicator {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+}
+
+.divider {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    /* align-items: flex-start; */
+    justify-content: center;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.info-div {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    direction: rtl;
+    text-align: right;
+    padding: 10px;
+}
+
+.info-div>p {
+    width: 95%;
+    text-wrap: balance;
+    text-align: right;
+}
+
+.image-div {
+    width: 100%;
+    padding: 10px;
+}
+
+.image-div>img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+
+}
+
+.href {
+    display: flex;
+    align-self: center;
+    font-size: 36px;
+    font-weight: 900;
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin-top: 10px;
+    transition: all 0.3s;
+    background-color: darkslategrey;
+    color: white;
+    box-sizing: border-box;
+    border: solid 3px transparent;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.href:hover {
+    background-color: white;
+    color: darkslategrey;
+    border: solid 3px transparent;
+
+}
+
+.href:active {
+    border: 3px solid darkslategrey;
+}
+
+.not-title {
+    font-weight: 400;
+
+}
+
+.trash {
+    box-sizing: border-box;
+    width: 50px;
+    position: absolute;
+    right: 90px;
+    top: 20px;
+}
+
+.trash:hover {
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 11px;
+    box-shadow: 0px 0px 12px rgba(141, 0, 0, 0.87)
+}

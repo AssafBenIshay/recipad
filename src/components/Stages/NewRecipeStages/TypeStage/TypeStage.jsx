@@ -5,6 +5,8 @@ import TypeStageComplete from '../TypeStage/TypeStageComplete/TypeStageComplete'
 
 export default function TypeStage({stage,setStage,type,setType}) {
     const [valI, setValI] = React.useState('')
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+
         
     function handleClick() {
         let h4s = Array.from(document.getElementsByTagName('h4'))

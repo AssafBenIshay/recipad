@@ -4,7 +4,9 @@ import './NameStage.css'
 import NameStageComplete from './NameStageComplete/NameStageComplete';
 
 export default function NameStage({ stage,setStage ,name,setName}) {
-    const [valI,setValI] = React.useState("") //val is set inside the input component
+    const [valI, setValI] = React.useState("") //val is set inside the input component
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+
 
     function handleClick() {
         let h4s = Array.from(document.getElementsByTagName('h4'))
@@ -22,20 +24,21 @@ export default function NameStage({ stage,setStage ,name,setName}) {
             });
             setName(valI)
             setStage(2)
-
         }
     }
     
     return (
-        <>
-            {stage ===1 ?<div className='name-container'>
+        <div>
+            {
+                stage === 1 ? <div className='name-container'>
                 <h2 className='name-title'>שלב ראשון : </h2>
                 <h4 className=''>בבקשה הכניסי את שם המתכון</h4>
                 <InputField setValI={setValI}/>
                 <h4 className=''>לחצי כאן לאחר שבחרת שם בשביל</h4>
                 <button onClick={handleClick}>לעבור לשלב הבא</button>
-            </div>:<NameStageComplete name={name} />}
+                </div> : <NameStageComplete name={name} />
+            }
             
-        </>
+        </div>
     )
 }

@@ -4,8 +4,14 @@ import Stage0Complete from './Stage0Complete/Stage0Complete'
 import React from 'react'
 
 
-export default function Stage0({ setStage,stage }) {
-    return (
+export default function Stage0({ setStage, stage }) {
+    
+    React.useEffect(() => {
+        
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    })
+
+    return(
         <>
             {stage === 0? <div className='container'>
                 <h2 className=''>עריכת מתכון חדש</h2>

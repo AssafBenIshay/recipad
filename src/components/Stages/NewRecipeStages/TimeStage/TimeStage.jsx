@@ -5,7 +5,9 @@ import './TimeStage.css'
 
 export default function TimeStage({ stage, setStage, timer, setTimer }) {
     const [hours, setHours] = React.useState('')
-    const [minutes,setMinutes] = React.useState('')
+    const [minutes, setMinutes] = React.useState('')
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+
     
     function handleClick() {
         if (hours && minutes) { setTimer(`${hours} שעות ו${minutes} דקות.`) }

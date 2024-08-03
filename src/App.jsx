@@ -5,6 +5,8 @@ import Stages from './components/Stages/Stages'
 import imagePlaceholder from './assets/imagePlaceholder.png'
 import Toast from './components/Notifications/Toast'
 import whitePencil from './assets/pencilWhite.png'
+import RecipesView from './components/RecipesLoader/RecipesView'
+import RecipeEdit from './components/RecipeEdit/RecipeEdit'
 
 
 function App() {
@@ -20,8 +22,10 @@ function App() {
   const [recipe, setRecipe] = React.useState({})
   const [addRecipeBtn, setAddRecipeBtn] = React.useState()
   const [announce, setAnnounce] = React.useState('')
-  const [isStages,setIsStages] = React.useState(false)
-
+  const [isStages, setIsStages] = React.useState(false)
+  const [recipeViewWindow, setRecipeViewWindow] = React.useState(null)
+  const [showFav, setShowFav] = React.useState(false)
+  const [searchWord,setSearchWord] = React.useState('')
 
   
   React.useEffect(() => {
@@ -50,7 +54,21 @@ function App() {
         setAddRecipeBtn={setAddRecipeBtn}
         setIsStages={setIsStages}
         isStages={isStages}
+        setShowFav={setShowFav}
+        setSearchWord={setSearchWord}
       />
+      {recipeViewWindow ?
+        <RecipeEdit
+          recipeViewWindow={recipeViewWindow}
+          setRecipeViewWindow={setRecipeViewWindow}
+          setAnnounce={setAnnounce} 
+          /> :
+        <RecipesView
+          setRecipeViewWindow={setRecipeViewWindow}
+          showFav={showFav}
+          searchWord={searchWord} 
+          setAnnounce={setAnnounce}
+          />}
       {isStages && <Stages
         setAddRecipeBtn={setAddRecipeBtn}
         setName={setName}
@@ -76,6 +94,7 @@ function App() {
         setAnnounce={setAnnounce}
         setIsStages={setIsStages}
       />}
+
     </div>
   )
 }

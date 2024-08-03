@@ -2,6 +2,9 @@ import './Stage0Complete.css'
 import React from 'react'
 
 export default function Stage0Complete({ stage }) {
+    
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+
     return (
         <div className='container-stage0-complete'>
             <h1> 🎉התחלת מתכון חדש ! 🎊 </h1>

@@ -33,6 +33,7 @@ export default function Stages({ setName, name, categories, setCategories, recip
                 setCategories={setCategories}
                 recipeCategory={recipeCategory}
                 setRecipeCategory={setRecipeCategory}
+                setAnnounce={setAnnounce}    
             />}
             {stage >= 3 && <TypeStage 
                 stage={stage}

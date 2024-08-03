@@ -5,28 +5,54 @@ import InputDropdown from '../../inputComponents/InputDropdown'
 import CategoryStageComplete from './CategoryStageComplete/CategoryStageComplete'
 import Stages from '../../Stages'
 
-export default function CategoryStage({ stage,setStage, categories, setCategories, recipeCategory, setRecipeCategory }) {
+
+export default function CategoryStage({ stage,setStage, categories, setCategories, recipeCategory, setRecipeCategory ,setAnnounce}) {
 
     const [valC, setValC] = React.useState("") //val is set inside the dropdown component
     const [valI, setValI] = React.useState("") //val is set inside the input component
+    const [categoriesList, setCategoriesList] = React.useState([])
+    
+    React.useEffect(() => {
+        const getCategoriesFromDb = async () => {
+            let url = import.meta.env.VITE_API
+            const response = await fetch(url)
+            const rawData = await response.json()
+            const res = Array.from(rawData)
+            const arry = []
+            res.forEach((category) => {
+                arry.push(category.name)
+            })
+            setCategoriesList(arry)
+        }
+        getCategoriesFromDb()
+    })
 
     function handleClick() {
         var h4arr = Array.from(document.getElementsByTagName('h4'))
+        
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
 
-        if (valC) {
-            setRecipeCategory(valC)
-            setStage(3)
-        } else if (valI) {
-            setRecipeCategory(valI)
-            setStage(3)
-
-        } else {
-            h4arr.map((element) => {
-            element.style.color = '#af2211'
-            });
-
+        
+            if (valC && !valI) {
+                setRecipeCategory(valC)
+                setStage(3)
+            } else if (valI) {
+                
+                if (categoriesList.includes(valI) ) {
+                    setAnnounce(`תקלה, הקטגוריה ${valI} כבר קיימת.`)
+                    setStage(1)
+                    } else {
+                        setRecipeCategory(valI)
+                        setStage(3)
+                    }
+            
+            } else {
+                h4arr.map((element) => {
+                    element.style.color = '#af2211'
+                });
+            }
         }
-    }
+    
     return (
     <>
             {stage === 2?

@@ -5,6 +5,8 @@ import AmountStageComplete from './AmountStageComplete/AmountStageComplete'
 
 export default function AmountStage({stage,setStage,amount,setAmount }) {
     const [valD, setValD] = React.useState('')
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+
     
     function handleClick() {
         { valD && setAmount(valD) }

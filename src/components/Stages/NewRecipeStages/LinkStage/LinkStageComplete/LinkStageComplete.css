@@ -12,6 +12,11 @@
     height:min-content;
 }
 
+.link-stage-complete>p{
+    text-wrap:balance;
+    direction: ltr;
+}
+
 .link-stage-complete>h1 {
     margin: 10px 30px;
 }

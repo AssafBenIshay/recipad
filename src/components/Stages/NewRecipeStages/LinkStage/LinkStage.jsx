@@ -5,7 +5,9 @@ import InputLinkField from '../../inputComponents/InputLinkField'
 
 export default function LinkStage({stage,setStage,rLink,setRLink}) {
     const [linkI, setLinkI] = React.useState('')
-    const [btn,setBtn] = React.useState(<button id='next' disabled>סיום</button>)
+    const [btn, setBtn] = React.useState(<button id='next' disabled>סיום</button>)
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+
     
     function pasteLink() {
         let tAreaEl = document.getElementById('link')

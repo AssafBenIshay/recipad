@@ -12,7 +12,10 @@ import whitePencil from '../../assets/pencilWhite.png'
 
 
 
-export default function AppBar({ addRecipeBtn, setAddRecipeBtn ,setIsStages ,isStages}) {
+export default function AppBar({ addRecipeBtn, setAddRecipeBtn, setIsStages, isStages, setShowFav ,setSearchWord}) {
+    const [trueHeart, setTrueHeart] = React.useState(false)
+    const [searchValue, setSearchValue] = React.useState('')
+    const inputRef = React.useRef('')
 
     React.useEffect(() => {
         setAddRecipeBtn(whitePlus) 
@@ -29,17 +32,34 @@ export default function AppBar({ addRecipeBtn, setAddRecipeBtn ,setIsStages ,isS
         }
     }
 
+    function showFavorites() {
+        setShowFav(last => !last)
+        setTrueHeart(last => !last)
+    }
+
+    function handleSearch() {
+        setSearchWord(searchValue)
+        console.log('searchValue :>> ', searchValue);
+        inputRef.current.value = ''
+    }
+
     return (
         <div className='app-bar'>
            
             <div className='action'>
                 <button className='plus-btn'><img src={addRecipeBtn} alt='a recipe is currentlly being edited' onClick={handleClick} /></button>
-                <input type='text' className='search'></input>
-                <img src={magnifyingWhite} alt='search'></img>
+                <input
+                    type='text'
+                    className='search'
+                    id='search'
+                    onChange={(e) => setSearchValue(e.target.value)}
+                    ref={inputRef} 
+                    ></input>
+                <img src={magnifyingWhite} alt='search' onClick={handleSearch}></img>
             </div>
             <div className='title'>
                 <h1>המתכונים שלי</h1>
-                <img src={whiteHeart} alt='heart' />
+                <img src={trueHeart?whiteHeart:favHeart} alt='show only all favorite recipes' onClick={showFavorites} />
             </div>
         </div>
     )

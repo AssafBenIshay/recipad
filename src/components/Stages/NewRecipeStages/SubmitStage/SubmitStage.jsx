@@ -4,17 +4,19 @@ import whitePlus from '../../../../assets/whitePlus.png'
 
 export default function SubmitStage({ recipe, setRecipe, name, recipeCategory, type, timer,
     amount, comments, image, rLink, setAddRecipeBtn ,setAnnounce ,setIsStages}) {
-    
-    
+        
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     
     function handleClick() {
         let timeStamp = new Date().toISOString()
+        var categoriesList = []
+
 
         const newRecipe = 
         {
             "id":`${timeStamp}`,
             "name":`${name}`,
-            "isFavorite":`${false}`,
+            "isFavorite":false,
             "category":`${recipeCategory}`,
             "type":`${type}`,
             "time":`${timer}`,
@@ -27,8 +29,8 @@ export default function SubmitStage({ recipe, setRecipe, name, recipeCategory, t
             fetch(import.meta.env.VITE_API_R, {
                 method: "post",
                 headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
                 },
                 body: JSON.stringify(newRecipe)
             })
@@ -48,7 +50,32 @@ export default function SubmitStage({ recipe, setRecipe, name, recipeCategory, t
         
         setAddRecipeBtn(whitePlus)
         setIsStages(false)
+
+        timeStamp = new Date().toISOString()
+
+        const newCategory = {
+            "id": `${timeStamp}`,
+            "name":`${newRecipe.category}`
+        }
+
+      
+            
+        
+            fetch(import.meta.env.VITE_API, {
+                method: "post",
+                headers:{
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                },
+                body:JSON.stringify(newCategory)
+        })
+            .then((response2) => {
+                setAnnounce(`יצרת קטגורית תבשילים חדשה בשם :${newRecipe.category}`)
+            })
+        
     }
+
+
     
     
 

@@ -1,146 +1,118 @@
 {
   "categories": [
     {
-      "id": "1",
+      "id": "2024-07-26T07:54:11.530Z",
       "name": "עיקרית"
     },
     {
-      "id": "2",
+      "id": "2024-07-26T07:54:12.530Z",
       "name": "קינוח"
     },
     {
-      "id": "3",
+      "id": "2024-07-26T07:54:13.530Z",
       "name": "יומולדת"
     },
     {
-      "id": "4",
+      "id": "2024-07-26T07:54:14.530Z",
       "name": "מתאבן"
     },
     {
-      "id": "5",
+      "id": "2024-07-26T07:54:15.530Z",
       "name": "עצירות"
+    },
+    {
+      "id": "2024-07-26T07:54:16.530Z",
+      "name": "מתאבנים"
+    },
+    {
+      "id": "2024-07-26T18:03:06.519Z",
+      "name": "בחממות"
+    },
+    {
+      "id": "2024-07-27T15:55:47.715Z",
+      "name": "נישנוש קל"
+    },
+    {
+      "id": "2024-08-03T06:02:03.390Z",
+      "name": "מתכון חג"
+    },
+    {
+      "id": "2024-08-03T10:57:11.614Z",
+      "name": "מאכלים תימניים"
+    },
+    {
+      "id": "2024-08-03T11:37:29.774Z",
+      "name": "eehbuj"
+    },
+    {
+      "id": "2024-08-03T12:04:02.607Z",
+      "name": "פלאפל"
+    },
+    {
+      "id": "2024-08-03T12:23:44.487Z",
+      "name": "d"
+    },
+    {
+      "id": "2024-08-07T14:54:40.116Z",
+      "name": "sdff"
+    },
+    {
+      "id": "2024-08-10T07:48:40.518Z",
+      "name": "סלטים"
+    },
+    {
+      "id": "2024-08-10T07:53:33.166Z",
+      "name": "עיקרית"
     }
   ],
   "recipes": [
     {
-      "id": "1",
-      "name": "עוף בפרמזן",
+      "id": "2024-08-02T07:35:06.182Z",
+      "name": "גולאש",
+      "isFavorite": true,
+      "category": "עיקרית",
+      "type": "בשרי",
+      "time": "3 שעות ו12 דקות.",
+      "amount": "6",
+      "comments": "בסכס",
+      "image": "https://medias.hashulchan.co.il/www/uploads/2016/04/650_500-40-2000x1125.jpg",
+      "link": "https://www.hashulchan.co.il/%D7%9E%D7%AA%D7%9B%D7%95%D7%A0%D7%99%D7%9D/%D7%92%D7%95%D7%9C%D7%90%D7%A9-%D7%94%D7%95%D7%A0%D7%92%D7%A8%D7%99-%D7%94%D7%9B%D7%99-%D7%98%D7%A2%D7%99%D7%9D/"
+    },
+    {
+      "id": "2024-08-02T18:43:55.462Z",
+      "name": "בלינצ'ס צינמוקים",
+      "isFavorite": false,
+      "category": "בחממות",
+      "type": "חגיגי",
+      "time": "50 דקות",
+      "amount": "6",
+      "comments": "מתכון בלינצ׳ס במילוי גבינה וצימוקים\n\n12 בלינצ'ס, 3-4 מנות, חלבי, 30 דקות מהרגע שמתחילים עד שאפשר לאכול\nמצרכים:\n\nלחביתיות:\n\n150 מ״ל (1/2 כוס+2 כפות) מים\n150 מ״ל (1/2 כוס + 2 כפות) חלב או רוויון\n2 ביצים\n150 גרם (כוס+כפית גדושה) קמח\n30 גרם חמאה מומסת\nקורט מלח\n\nלמילוי:\n\n200 גרם ריקוטה\n100 גרם גבינה 9%\n3 כפות צימוקים מושרים ב3 כפות רום\n2 כפות שוקולד מריר מגורד בפומפייה\n50 גרם סוכר\nרבע כפית גרידת תפוז או לימון- לא חובה\n\nלטיגון הבלינצ'ס:\n\n50 גרם חמאה\n\nלהגשה:\n\nאבקת סוכר\nגביע שמנת חמוצה\nדובדבנים טריים או פירות אחרים שאוהבים\nאופן הכנה: מכינים את המילוי:\n\n    מערבבים את כל הרכיבים ושומרים במקרר.\n\nמכינים את הבלילה:\n\n    שמים את הקמח בקערה. יוצרים גומה גדולה במרכז ואליה יוצקים את הרוויון, הביצים ואת המים.\n    טורפים בהדרגה משולי הגומה החוצה לקבלת בלילה אחידה וחלקה. מוסיפים את החמאה המומסת וטורפים גם אותה פנימה.\n    לחלופין, שמים את כל המצרכים בכוס בלנדר ומערבלים לבלילה אחידה, או שמים בכוס גבוהה ומאחדים עם בלנדר ידני.\n\nהופכים אותה לחביתיות:\n\n    ממיסים מעט מהחמאה לטיגון במחבת נון סטיק.\n    יוצקים 3/4 מצקת בלילה למחבת ומנענעים אותה בכדי לשטח את הבלילה.\n    כאשר השוליים מזהיבים הופכים בעזרת תרבד.\n    מבשלים את הצד השני לכמה שניות ומורידים מהאש. חוזרים על הפעולות עם יתר הבלילה – ואם צריך מוסיפים חמאה בין חביתית לחביתית. יוצאים 12 בלינצ'סים מהתערובת.\n\nממלאים:\n\n    פורסים בלינצ׳ון אחד על משטח עבודה.\n    בחלק התחתון מניחים 2 כפות גדושות של מילוי. מגלגלים לחצי, מקפלים את הקצוות פנימה וממשיכים לגלגל לקבלת מעטפה.\n    חוזרים על הפעולה עם יתר הבלינצ׳ס.\n\nלפני ההגשה:\n\n    מחממים מחבת טפלון עם מעט חמאה.\n    מטגנים את הבלינצ׳ס הממולא להזהבה משני הצדדים. מוציאים לנייר סופג.\n    מעבירים לצלחות, מפדרים באבקת סוכר ומגישים לצד פירות יער או דובדבנים ושמנת חמוצה.\n",
+      "image": "https://www.thekitchencoach.co.il/wp-content/uploads/2016/06/IMG_8936.jpg",
+      "link": "https://www.thekitchencoach.co.il/%D7%9E%D7%AA%D7%9B%D7%95%D7%9F-%D7%91%D7%9C%D7%99%D7%A0%D7%A6%D7%A1-%D7%92%D7%91%D7%99%D7%A0%D7%94/"
+    },
+    {
+      "id": "2024-08-10T07:48:40.518Z",
+      "name": "סלט באבאגנוש",
+      "isFavorite": true,
+      "category": "סלטים",
+      "type": "צמחוני",
+      "time": "20 דקות",
+      "amount": "5",
+      "comments": "\nבאבא גנוש מושלם - סלט חצילים קלויים עם טחינה \n\nמצרכים:\n\n2 חצילים \n\nשמן זית \n\nכוס טחינה גולמית\n\n2 כפות מיונז - זה הסוד שהופך את הסלט לחלומי! \n\n2 שיני שום כתושות \n\nמלח/ פלפל שחור \n\nאפשר להוסיף מיץ מחצי לימון - לא חובה \n\nלעיטור בהגשה (לא חובה):\n\nשמן זית\n\nמיץ של עגבניה\n\nצילי חריף \n\nצנוברים קלויים \n\nפיטרוזליה קצוצה דק\n\n\nאופן ההכנה: \n\nאפשר לשרוף חצילים על האש או מנגל - ולחלופין להכין כמוני בתנור הביתי בשיטת הקיפודים. \n\nמחממים את התנור על תכנית גריל (200-250 מעלות) \n\nחוצים את החצילים. \n\nבעזרת סכין חדה יוצרים חתכים (אפשר משולשים ואפשר ריבוע) אבל חתכים עמוקים!!  עד כמה שאפשר \n\nמשמנים בשמן מעל. חשוב לוודא שהשמן יחלחל גם לתוך החתכים. \n\nמפזרים מלח מעל ומכניסים לתנור להזהבה כ-10 דקות. - שימו עין שלא יישרף לכם.\n\nאחרי שהחצילים קיבלו צבע, מורידים למגש התחתון את החצילים,  מעבירים את התנור לאופציה של אפייה (אוויר חם) אפשר גם טורבו על 200 מעלות.\n\nואופים את החצילים עד שמתרככים עוד כ-20 דקות. \n\n\nלאחר שהחצילים נאפו, בעזרת כף מוצאים את הבשר של החצילים ומעבירים לקערה. \n\nמוסיפים את הטחינה הגולמית, מיונז, מלח ופלפל שחור ומערבבים. \n\nמעבירים לצלחת הגשה, מקשטים (לא חובה) ומגישים. \n\nאפשר ורצוי לאכול חם :) \n\n\n\n",
+      "image": "https://static.wixstatic.com/media/ea4d13_9af90557903e4fe8945e8c96650d27bc~mv2.jpg/v1/fill/w_1211,h_1614,al_c,q_90/ea4d13_9af90557903e4fe8945e8c96650d27bc~mv2.webp",
+      "link": "https://www.ronyohananov.com/post/%D7%A1%D7%9C%D7%98-%D7%91%D7%90%D7%91%D7%90-%D7%92%D7%A0%D7%95%D7%A9-%D7%9E%D7%95%D7%A9%D7%9C%D7%9D-%D7%97%D7%A6%D7%99%D7%9C%D7%99%D7%9D-%D7%A7%D7%9C%D7%95%D7%99%D7%99%D7%9D-%D7%A2%D7%9D-%D7%98%D7%97%D7%99%D7%A0%D7%94-%D7%95%D7%A1%D7%95%D7%93-%D7%9B%D7%9E%D7%95%D7%A1"
+    },
+    {
+      "id": "2024-08-10T07:53:33.166Z",
+      "name": "פילה חזיר",
       "isFavorite": false,
       "category": "עיקרית",
       "type": "בשרי",
-      "time": "3 שעות",
-      "amount": 4,
-      "comments": "המנה האהובה על אורי",
-      "image": "https://www.recipebox.co.il/wp-content/uploads/2008/07/parmesan-1357016_1280-825x510.jpg",
-      "link": "https://www.recipebox.co.il/%D7%A2%D7%95%D7%A3-%D7%91%D7%A4%D7%A8%D7%9E%D7%96%D7%9F/"
-    },
-    {
-      "id": "2",
-      "name": "גלידה",
-      "isFavorite": true,
-      "category": "קינוח",
-      "type": "פרווה",
-      "time": "0.5 שעות",
-      "amount": 10,
-      "comments": "המנה האהובה על אייל",
-      "image": "https://medias.hashulchan.co.il/www/uploads/2018/10/%D7%92%D7%9C%D7%99%D7%93%D7%AA-%D7%A6%D7%90%D7%A0%D7%A7%D7%99-%D7%9E%D7%95%D7%A0%D7%A7%D7%99-%D7%A7%D7%A8%D7%9F-%D7%A7%D7%93%D7%95%D7%A9-e1597662332235-2000x1125-1597662425.jpg",
-      "link": "https://www.hashulchan.co.il/topic/%D7%92%D7%9C%D7%99%D7%93%D7%94/"
-    },
-    {
-      "id": "Fri Jul 19 2024 22:00:14 GMT+0300 (Israel Daylight Time)",
-      "name": "hfj",
-      "isFavorite": "false",
-      "category": "קינוח",
-      "type": "ghj",
-      "time": "לא מוגדר",
-      "amount": "לא מוגדר",
-      "comments": "ונה עבור המנה ,התמונה חשובה.\r\nשימי לב שניתן להעתיק ולהדביק את התמונה על ידי לחיצה על כפתור ימני בעכבר כאשר הוא על",
-      "image": "https://justbakedbyme.wordpress.com/wp-content/uploads/2012/01/chocolate-cupcake-31.jpg",
-      "link": "undefined"
-    },
-    {
-      "id": "2024-07-20T13:23:24.727Z",
-      "name": "dfg",
-      "isFavorite": "false",
-      "category": "dfg",
-      "type": "dfg",
-      "time": "לא מוגדר",
-      "amount": "לא מוגדר",
-      "comments": "dfg",
-      "image": "https://sallysbakingaddiction.com/wp-content/uploads/2017/06/moist-chocolate-cupcakes-5.jpg",
-      "link": "תיקי את שורת הקישור בדף המתכון שאת רוצה לשמור.\r\nשימי לב שסימנת את "
-    },
-    {
-      "id": "2024-07-24T16:14:23.562Z",
-      "name": "ghjgtghj",
-      "isFavorite": "false",
-      "category": "עצירות",
-      "type": "ghjgh",
-      "time": "5 שעות ו5 דקות.",
-      "amount": "5",
-      "comments": "hat the source map is not JSON data — so we’re serving the wrong file.\n\nThere are a few common ways that source maps can go wrong; they are detailed in the following sections.\nSource map missing or inaccessible¶\n\nThe source map resource can be missing or inaccessible.\nSource map file is missing\n\nThe fix here is to make sure the file is being served and is accessible to the browser\nInvalid source map¶\n\nThe source map data can be invalid — either not a JSON file at all, or with an incorrect structure. Typical error messages here are:\n\n    SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data\n\n    Error: \"version\" is a required argument\n\nError: \"version\" is a required argument g",
-      "image": "https://bobbyhadz.com/images/blog/all-in-programming/banner.webp",
-      "link": "n go wrong; they are detailed in the following sections. Source map missing or inaccessible¶ The source map resource can be missing or inaccessible. Source map file is missing The fix here is to make sure the file is being served and is accessible to the browser Invalid source map¶ The source map data can be invalid — either not a JSON file at all, or with an incorrect structure. Typical error messages here are: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data Error: \"version\" "
-    },
-    {
-      "id": "2024-07-24T16:24:26.114Z",
-      "name": "ghjgtghj",
-      "isFavorite": "false",
-      "category": "עצירות",
-      "type": "ghjgh",
-      "time": "5 שעות ו5 דקות.",
-      "amount": "5",
-      "comments": "hat the source map is not JSON data — so we’re serving the wrong file.\n\nThere are a few common ways that source maps can go wrong; they are detailed in the following sections.\nSource map missing or inaccessible¶\n\nThe source map resource can be missing or inaccessible.\nSource map file is missing\n\nThe fix here is to make sure the file is being served and is accessible to the browser\nInvalid source map¶\n\nThe source map data can be invalid — either not a JSON file at all, or with an incorrect structure. Typical error messages here are:\n\n    SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data\n\n    Error: \"version\" is a required argument\n\nError: \"version\" is a required argument g",
-      "image": "https://bobbyhadz.com/images/blog/all-in-programming/banner.webp",
-      "link": "n go wrong; they are detailed in the following sections. Source map missing or inaccessible¶ The source map resource can be missing or inaccessible. Source map file is missing The fix here is to make sure the file is being served and is accessible to the browser Invalid source map¶ The source map data can be invalid — either not a JSON file at all, or with an incorrect structure. Typical error messages here are: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data Error: \"version\" "
-    },
-    {
-      "id": "2024-07-26T05:55:42.207Z",
-      "name": "fsgsd",
-      "isFavorite": "false",
-      "category": "ghgdf",
-      "type": "xf",
-      "time": "לא מוגדר",
-      "amount": "לא מוגדר",
-      "comments": " עבור המתכון ,אם אין זה גם בסדר.\nשימי לב שניתן גם להעתיfק ולהדביק את פירוט הרכיבים והוראות ההכנה מהאתר שבו נמf",
-      "image": "https://www.allrecipes.com/thmb/X-_sPqhboYd2rGLHJjlFj5ot3Js=/364x242/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/23567_Slow-Cooker-Pepper-Steak-4x3-cropped-ab4e352104934a81b64dd16930507239.jpg",
-      "link": "https://www.allrecipes.com/"
-    },
-    {
-      "id": "2024-07-26T05:58:14.303Z",
-      "name": "הנגכה",
-      "isFavorite": "false",
-      "category": "קינוח",
-      "type": "דגכ",
-      "time": "לא מוגדר",
-      "amount": "לא מוגדר",
-      "comments": "https://www.allrecipes.com/",
-      "image": "https://www.allrecipes.com/thmb/8cJrvuWDWwswhNzlhys6OqCcCPg=/364x242/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/218863_Slow-Cooker-Cilantro-Lime-Chicken-4x3-cropped-e3e04f3722d840069b903ae6b22e9690.jpg",
-      "link": "ove egg salad and this is the best I've ever had! The lemon juice adds just the right amount of tang and livens up the flavor.\"\nTam V., Washington, JO"
-    },
-    {
-      "id": "2024-07-26T06:03:53.863Z",
-      "name": "fdg",
-      "isFavorite": "false",
-      "category": "קינוח",
-      "type": "dfg",
-      "time": "לא מוגדר",
-      "amount": "לא מוגדר",
-      "comments": "dfgfgd",
-      "image": "https://www.allrecipes.com/thmb/q88UCMrwXjDds8dn514ilignu_k=/2000x666/filters:no_upscale():max_bytes(150000):strip_icc():focal(2392x341:2394x343):format(webp)/AR_SummerBashDI_LandingPageBanner_3x1-255d09ec6e4a4ddaa0c24fb3bdd125ad.jpg",
-      "link": "קישור בדף המתכון שאת רוצה לשמור.\nשימי לב שס"
-    },
-    {
-      "id": "2024-07-26T06:13:38.719Z",
-      "name": "dfg",
-      "isFavorite": "false",
-      "category": "sdfgs",
-      "type": "fds",
-      "time": "לא מוגדר",
-      "amount": "לא מוגדר",
-      "comments": "fsgsdafgdsa",
-      "image": "https://cdn.shopify.com/s/files/1/0080/6148/5119/articles/healthyeggplantrollatini-crop.jpg?v=1632240487",
-      "link": "תיקי את שורת הקישור בדף המתכון שאת רוצה לשמור.\nשימי לב שסימנת את כל שורת הקיש"
+      "time": "5 שעות ו12 דקות.",
+      "amount": "6",
+      "comments": "עבור 2 נתחי פילה (±800 גרם נטו לאחר ניקוי יסודי)\nמכינים משרה הכולל:\n1/4 כוס סויה (4 כפות)\n2 כפות יין אדום\n1 כף דבש\n1 כף סוכר חום\n1/2 כפית שום גרוס\n1/2 כפית קינמון\n1.2 כפית אבקת בצל\n\nמכניסים את הבשר למשרה, מכסים ומכניסים למקרר ללילה.\nמכניסים את הנתחים לשקית (ללא שאריות המשרה) ואוטמים.\n\nמבשלים בסו-ויד ב-60 מעלות למשך 3 שעות – יכול להיות שאפשר לקצר את הזמן אבל אני ממש לא ממליץ להוריד את הטמפרטורה.\nמצננים במי קרח ומכניסים למקרר – בשלב הזה הבשר מעצם מבושל ואפשר לאכול אותו, אבל הוא גם יכול להמתין מספר ימים במקרר עד לשעת הכושר המתאימה.\n\n\nכשרוצים לאכול – מייבשים היטב את הנתחים וצורבים על מחבת לוהטת כ-30 שניות מכל צד – כן, אני יודע שהנתח עגול ובתיאוריה יש לו רק צד אחד.\nפורסים לפרוסות בעובי של ס\"מ וממתינים לתשבוחות האורחים – אם לא קיבלתם, תחליפו אורחים.",
+      "image": "https://i0.wp.com/www.jaddess.com/wordpress/wp-content/uploads/2020/12/IMG_9020S.jpg?resize=940%2C198",
+      "link": "http://www.jaddess.com/%D7%A4%D7%99%D7%9C%D7%94-%D7%97%D7%96%D7%99%D7%A8-%D7%92%D7%A8%D7%A1%D7%94-%D7%9E%D7%A9%D7%95%D7%A4%D7%A8%D7%AA/"
     }
   ]
 }

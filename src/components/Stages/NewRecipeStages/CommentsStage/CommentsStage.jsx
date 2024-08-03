@@ -6,7 +6,9 @@ import CommentsStageComplete from './CommentsStageComplete/CommentsStageComplete
 export default function CommentsStage({ stage, setStage, comments, setComments }) {
     const [valI, setValI] = React.useState('')
     const [btn, setBtn] = React.useState('')
-    const [isVal,setIsVal] = React.useState(false)
+    const [isVal, setIsVal] = React.useState(false)
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+
 
     React.useEffect(() => {
         setComments(valI)
