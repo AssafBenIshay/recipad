@@ -1,11 +1,12 @@
 import React from 'react';
 import './Toast.css'
 
-export default function Toast({ announce }) {
-
+export default function Toast({ announce, setAnnounce }) {
+    
     
     React.useEffect(() => {
         let child = document.querySelector('.toast-frame')
+        child.style.opacity = 1
         let x = 0
         const fade = setInterval(doFade, 100)
         
@@ -19,23 +20,23 @@ export default function Toast({ announce }) {
                     child.x = 200
                 }
             }
-        }
+            
+        
 
-        setTimeout(() => {
+            setTimeout(() => {
             if (child) {
                 try {
-                    let parent = child.parentElement
-                    parent.removeChild(child)
- 
+                    child.style.opacity = 0
+                    setRun(true)
                 } catch (err) {
                     if (!child) { alert('אופס, קרתה תקלה : ', err) }
-                    
                 }
+                
             }
         }, 4000);
-        
+        }
     },[])
-
+    
 
     return (
         <>

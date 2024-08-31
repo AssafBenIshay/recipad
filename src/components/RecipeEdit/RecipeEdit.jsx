@@ -4,6 +4,9 @@ import whiteHeart from '../../assets/heartOutline.png'
 import favHeart from '../../assets/heart.png'
 import trashBin from '../../assets/trash.png'
 import DeleteApprovePopup from './DeleteApprovePopup'
+import app from '../../firebaseConfig'
+import { getDatabase,ref,set,get,push,remove} from 'firebase/database'
+
 
 import './RecipeEdit.css'
 
@@ -12,29 +15,56 @@ export default function RecipeEdit({ recipeViewWindow, setRecipeViewWindow, setA
     const [imageLoaded, setImageLoaded] = React.useState(false)
     const [answer, setAnswer] = React.useState(false)
     const [deleteClicked, setDeleteClicked] = React.useState(false)
+    const [recipeToken,setRecipeToken] = React.useState('')
     
     
     React.useEffect(() => {
-        async function fetchEditRecipe() {
-            const response = await fetch(
-                `${import.meta.env.VITE_API_R}/${recipeViewWindow}`, {
-                method: "GET",
-                headers: {
-                    "Accept": "application/json",
-                    "Content-Type": "application/json"
+        // async function fetchEditRecipe() {
+        //     const response = await fetch(
+        //         `${import.meta.env.VITE_API_R}/${recipeViewWindow}`, {
+        //         method: "GET",
+        //         headers: {
+        //             "Accept": "application/json",
+        //             "Content-Type": "application/json"
+        //         }
+        //     }
+        //     )
+
+        //     const jsonRecipeByID = await response.json()
+        //     if (response.ok) {
+        //         setRecipeData(jsonRecipeByID)
+        //     }
+        //     else {
+        //         console.log('object :>> ', Error);
+        //     }
+        // }
+        // fetchEditRecipe()
+
+
+        const fetchData = async () => {
+        //! לחיצה על מתכון כדי לערוך אותו
+        const db = getDatabase(app)
+      const dbRef = ref(db,`recipes/`)
+            const snapshot = await get(dbRef)
+            if (snapshot.exists) {
+                let receivedRecipeArray = Object.values(snapshot.val())
+                let receivedRecipeKeys = Object.keys(snapshot.val())
+                let receivedRecipe = receivedRecipeArray.filter(recipe => recipe.id === recipeViewWindow)
+
+                setRecipeData(receivedRecipe[0])
+                console.log('recipeData :>> ', receivedRecipe[0]);
+                for (let i = 0; i < receivedRecipeKeys.length; i++){
+                    console.log('recipeData.id :>> ', receivedRecipe[0].id);
+                    if (receivedRecipeArray[i].id === recipeViewWindow) {
+                        setRecipeToken(receivedRecipeKeys[i])
+                        break
+                    }
                 }
             }
-            )
+    }
+    fetchData()
+  
 
-            const jsonRecipeByID = await response.json()
-            if (response.ok) {
-                setRecipeData(jsonRecipeByID)
-            }
-            else {
-                console.log('object :>> ', Error);
-            }
-        }
-        fetchEditRecipe()
     }, [])
 
     React.useEffect(() => {
@@ -59,25 +89,35 @@ export default function RecipeEdit({ recipeViewWindow, setRecipeViewWindow, setA
         
         if (answer) {
             const clickHandler = async () => {
-                try {
-                    const res = await fetch(`${import.meta.env.VITE_API_R}/${recipeViewWindow}`, {
-                        method: 'DELETE',
-                    })
+                // try {
+                //     const res = await fetch(`${import.meta.env.VITE_API_R}/${recipeViewWindow}`, {
+                //         method: 'DELETE',
+                //     })
 
-                    const data = await res.json()
+                //     const data = await res.json()
 
-                    if (!res.ok) {
-                        console.log(data.description)
-                        return
-                    } else {
-                        setAnnounce(`המתכון ${recipeData.name} הוסר בהצלחה`)
-                        setTimeout(() => {
-                            setRecipeViewWindow('')
-                        }, 1000);
-                    }
-                } catch (error) {
-                    console.log(error)
-                }
+                //     if (!res.ok) {
+                //         console.log(data.description)
+                //         return
+                //     } else {
+                //         setAnnounce(`המתכון ${recipeData.name} הוסר בהצלחה`)
+                //         setTimeout(() => {
+                //             setRecipeViewWindow('')
+                //         }, 1000);
+                //     }
+                // } catch (error) {
+                //     console.log(error)
+                // }
+
+                const db = getDatabase(app)
+                const deleteRef = ref(db, 'recipes/'+recipeToken)
+                await remove(deleteRef)
+                
+                setAnnounce('המתכון נמחק בהצלחה 😭')
+
+                setTimeout(() => {
+                    window.location.reload()
+                }, 3000);
             }
             clickHandler()
         }

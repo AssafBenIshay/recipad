@@ -1,6 +1,9 @@
 import React from "react";
 import './SubmitStage.css'
 import whitePlus from '../../../../assets/whitePlus.png'
+import app from '../../../../firebaseConfig'
+import { getDatabase,ref,set,get,push,remove} from 'firebase/database'
+
 
 export default function SubmitStage({ recipe, setRecipe, name, recipeCategory, type, timer,
     amount, comments, image, rLink, setAddRecipeBtn ,setAnnounce ,setIsStages}) {
@@ -26,52 +29,69 @@ export default function SubmitStage({ recipe, setRecipe, name, recipeCategory, t
             "link":`${rLink}`
         }
         setRecipe(newRecipe)
-            fetch(import.meta.env.VITE_API_R, {
-                method: "post",
-                headers: {
-                    "Accept": "application/json",
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(newRecipe)
-            })
-                .then((response) => {
-                    setAnnounce('יצרת מתכון חדש!! בישול נעים.')
-                    let stages = document.getElementById('stages')
-                    try {
-                        let stagesParent = stages.parentElement
-                        stagesParent.removeChild(stages)
+        // //----------------------------------------------------------------------------------------------
+        //     fetch(import.meta.env.VITE_API_R, {
+        //         method: "post",
+        //         headers: {
+        //             "Accept": "application/json",
+        //             "Content-Type": "application/json"
+        //         },
+        //         body: JSON.stringify(newRecipe)
+        //     })
+        //         .then((response) => {
+        //             setAnnounce('יצרת מתכון חדש!! בישול נעים.')
+        //             let stages = document.getElementById('stages')
+        //             try {
+        //                 let stagesParent = stages.parentElement
+        //                 stagesParent.removeChild(stages)
 
-                    } catch (error) {
-                        error
-                    }
+        //             } catch (error) {
+        //                 error
+        //             }
                     
                     
-                });
+        //         });
+
+            const saveData = async () => {
+            const db = getDatabase(app)
+            const newDocRef = push(ref(db, 'recipes/'))
+            set(newDocRef, newRecipe).then(() => {
+               setAnnounce(`המתכון החדש נשמר`)
+            }).catch((error) => {
+                alert("roorr :",error.message)
+            })
+
+            }
+            saveData()
+
+
         
         setAddRecipeBtn(whitePlus)
         setIsStages(false)
 
-        timeStamp = new Date().toISOString()
+        // timeStamp = new Date().toISOString()
 
-        const newCategory = {
-            "id": `${timeStamp}`,
-            "name":`${newRecipe.category}`
-        }
+        // const newCategory = {
+        //     "id": `${timeStamp}`,
+        //     "name":`${newRecipe.category}`
+        // }
 
       
             
         
-            fetch(import.meta.env.VITE_API, {
-                method: "post",
-                headers:{
-                    "Accept": "application/json",
-                    "Content-Type": "application/json"
-                },
-                body:JSON.stringify(newCategory)
-        })
-            .then((response2) => {
-                setAnnounce(`יצרת קטגורית תבשילים חדשה בשם :${newRecipe.category}`)
-            })
+        //     fetch(import.meta.env.VITE_API, {
+        //         method: "post",
+        //         headers:{
+        //             "Accept": "application/json",
+        //             "Content-Type": "application/json"
+        //         },
+        //         body:JSON.stringify(newCategory)
+        // })
+        //     .then((response2) => {
+        //         setAnnounce(`יצרת קטגורית תבשילים חדשה בשם :${newRecipe.category}`)
+        //     })
+        
+    
         
     }
 

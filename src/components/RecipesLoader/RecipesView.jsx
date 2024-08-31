@@ -3,25 +3,37 @@ import './RecipesView.css'
 import whiteHeart from '../../assets/heartOutline.png'
 import favHeart from '../../assets/heart.png'
 import Recipe from './Recipe/Recipe'
+import { getDatabase,ref,get } from 'firebase/database'
+import app from '../../firebaseConfig'
 
 export default function RecipesView({setRecipeViewWindow,showFav,searchWord,setAnnounce}) {
     const [recipesViewList, setRecipesViewList] = React.useState([])
 
 
     React.useEffect(()=>{
-        async function fetchRecipes() {
-            const response = await fetch(
-                import.meta.env.VITE_API_R, {
-                method: "GET",
-                headers: {
-                    "Accept": "application/json",
-                    "Content-Type": "application/json"
-                }
-            }
-            )
+        // async function fetchRecipes() {
+        //     const response = await fetch(
+        //         import.meta.env.VITE_API_R, {
+        //         method: "GET",
+        //         headers: {
+        //             "Accept": "application/json",
+        //             "Content-Type": "application/json"
+        //         }
+        //     }
+        //     )
 
-            const jsonDBdata = await response.json()
-            const data = Array.from(jsonDBdata)
+        //     const jsonDBdata = await response.json()
+        //     const data = Array.from(jsonDBdata)
+
+            const recipesFetch = async () => {
+            const db = getDatabase(app)
+            const dbRef = ref(db, 'recipes/')
+            const snapshot = await get(dbRef)
+            var data=[]
+                if (snapshot.exists()) {
+                    data = Object.values(snapshot.val())
+                }
+             
 
             if (showFav === true) {
                 const filteredViews = data.filter(recipe => recipe.isFavorite === true)
@@ -38,7 +50,9 @@ export default function RecipesView({setRecipeViewWindow,showFav,searchWord,setA
                     const views = filteredViews.map(recipeView =>(<Recipe
                     recipeView={recipeView}
                     key={crypto.randomUUID()}
-                    setRecipeViewWindow={setRecipeViewWindow} />))
+                        setRecipeViewWindow={setRecipeViewWindow} />))
+                    
+                    setAnnounce(`הנה תוצאות החיפוש למילה :${searchWord}`)
     
                 setRecipesViewList(views) 
                 } else {
@@ -63,7 +77,9 @@ export default function RecipesView({setRecipeViewWindow,showFav,searchWord,setA
             }
             
         }
-        fetchRecipes()
+        //fetchRecipes()
+        recipesFetch()
+
     }, [showFav,searchWord])
     
     
