@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './App.css'
 import AppBar from './components/AppBar/AppBar'
 import Stages from './components/Stages/Stages'
@@ -27,13 +27,11 @@ function App() {
   const [recipeViewWindow, setRecipeViewWindow] = React.useState(null)
   const [showFav, setShowFav] = React.useState(false)
   const [searchWord, setSearchWord] = React.useState('')
-  let [cArray,setCArray] = React.useState([])
-
-
+  var categoriesList = []
   
   React.useEffect(() => {
     // this function fills the dropdown with categories from the DB
-    var categoriesList = []
+
     // const get = async () => {
     //   let url = import.meta.env.VITE_API
     //   const response = await fetch(url)
@@ -50,17 +48,27 @@ function App() {
     // UpdateRead()
     const fetchData = async () => {
       const db = getDatabase(app)
-      const dbRef = ref(db,'categories')
+      const dbRef = ref(db,'recipes/')
       const snapshot = await get(dbRef)
       
+      //*console.log('snapshot :>> ', snapshot.toJSON());
+
       if (snapshot.exists()) {
-        setCArray(Object.values(snapshot.val()))
-        cArray.forEach((category) => {
-          categoriesList.push(category.name)
+        
+        const tArray = Object.values(snapshot.toJSON())
+
+        //*console.log('tArray :>> ', tArray);
+
+        tArray.forEach((obj) => {
+          //*console.log('category :>> ', obj.category); //* ok
+          if (!categoriesList.includes(obj.category)) {
+            categoriesList.push(obj.category)
+          }
+          
         })
         setCategories(categoriesList)
       } else {
-        alert(snapshot.toJSON())
+        alert(snapshot.toJSON()) 
       }
     }
     fetchData()
